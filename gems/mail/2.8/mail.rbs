@@ -2426,7 +2426,7 @@ module Mail
   #  mail[:from] = 'bob@test.lindsaar.net'
   #  mail['subject'] = 'This is an email'
   #  mail.body = 'This is the body'
-  def self.new: (*untyped args) ?{ () -> untyped } -> Message
+  def self.new: (*untyped args) ?{ () [self: Message] -> untyped } -> Message
 
   # Sets the default delivery method and retriever method for all new Mail objects.
   # The delivery_method and retriever_method default to :smtp and :pop3, with defaults
